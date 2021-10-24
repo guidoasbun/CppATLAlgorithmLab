@@ -10,13 +10,15 @@ void printList(const list<int>& aList);
 int main() {
     vector<int> myScores = {100, 100, 100, 100, 99, 99, 94, 90, 89, 89, 88, 83, 80, 79, 78, 76, 57, 45};
 
-    list<int> myList = {23, 36, 99, 3, 67, 34, 64, 99};
-    list<int> myList2 = {55, 56, 68, 79, 23, 34, 45, 56};
+    list<int> myList = {34, 24, 15, 38, 59, 30, 54, 35, 22, 63, 41};
+    list<int> myList2 = {1, 2, 3, 4};
     int myInt1{3};
-    int myInt2{5};
-    int myInt3{8};
+    int myInt2{23};
+    int myInt3{24};
 
     workingWithLists(myList, myList2, myInt1, myInt2, myInt3);
+
+    printList(myList);
 
     return 0;
 }

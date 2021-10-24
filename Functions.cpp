@@ -6,6 +6,7 @@
 #include <vector>
 #include <iostream>
 #include <numeric>
+#include <list>
 
 using namespace std;
 
@@ -36,11 +37,27 @@ void displayScores(vector<int>& scores)
 
 void workingWithLists(std::list<int>& firstList, std::list<int>& secondList, int value1, int value2, int value3)
 {
+    // Part 1
     auto found = find(firstList.begin(), firstList.end(), value1);
     if (found != firstList.end())
-        cout << "Found";
+        cout << "Found.";
     else
         cout << "Not found";
+    // Part 2
+    replace(firstList.begin(), firstList.end(), value2, value3);
+    // Part 3
+    firstList.erase(find(firstList.begin(), firstList.end(), value3));
+    // Part 4
+    firstList.sort();
+    // Part 5
+    auto iter1 = firstList.begin();
+    advance(iter1, 2);
+    reverse(iter1, firstList.end());
+    // Part 6
+    auto iter = firstList.begin();
+    advance(iter, 3);
 
-
+    auto iter2 = secondList.end();
+    prev(iter2, 3);
+    firstList.splice(iter, secondList, iter2, secondList.end() );
 }
