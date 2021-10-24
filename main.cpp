@@ -16,9 +16,10 @@ int main() {
     int myInt2{23};
     int myInt3{24};
 
-//    workingWithLists(myList, myList2, myInt1, myInt2, myInt3);
-
-    displayScores(myScores);
+    workingWithLists(myList, myList2, myInt1, myInt2, myInt3);
+    printList(myList);
+    printList(myList2);
+//    displayScores(myScores);
 
     return 0;
 }
