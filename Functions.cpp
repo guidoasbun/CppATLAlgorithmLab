@@ -30,5 +30,9 @@ void displayScores(vector<int>& scores)
 
 void workingWithLists(std::list<int>& firstList, std::list<int>& secondList, int value1, int value2, int value3)
 {
-
+    auto found = find(firstList.begin(), firstList.end(), value1);
+    if (found != firstList.end())
+        cout << "Found";
+    else
+        cout << "Not found";
 }
