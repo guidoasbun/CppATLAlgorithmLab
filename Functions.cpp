@@ -32,7 +32,8 @@ void displayScores(vector<int>& scores)
     // I do not understand what to do????
     int sum{0};
     for_each(scores.begin(), scores.end(), [& sum] (const auto elem) {sum += elem;});
-    cout << round((sum / scores.size()));
+    double size = scores.size();
+    cout<< round((sum/size)*10)/10;
 }
 
 void workingWithLists(std::list<int>& firstList, std::list<int>& secondList, int value1, int value2, int value3)
