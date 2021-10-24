@@ -11,14 +11,20 @@ using namespace std;
 
 void displayScores(vector<int>& scores)
 {
+    // Part 1
     sort(scores.begin(), scores.end(), [] (int a, int b) {return ( a > b);});
+    // Part 2
     for_each(scores.begin(), scores.end(), [] (int i) {cout << i << " ";});
+    // Part 3
     cout << *max_element(scores.begin(), scores.end());
+    // Part 4
     cout << *min_element(scores.begin(), scores.end());
+    // Part 5
     cout << count(scores.begin(), scores.end(), 100);
+    // Part 6
     cout << scores.size();
+    // Part 7
     cout << accumulate(scores.begin(), scores.end(), 0);
-
     // Last part,
     // Calculate the average of the scores
     // Use std::round to round to the decimal part
@@ -35,4 +41,6 @@ void workingWithLists(std::list<int>& firstList, std::list<int>& secondList, int
         cout << "Found";
     else
         cout << "Not found";
+
+
 }
