@@ -58,6 +58,7 @@ void workingWithLists(std::list<int>& firstList, std::list<int>& secondList, int
     advance(iter, 3);
 
     auto iter2 = secondList.end();
-    prev(iter2, 3);
-    firstList.splice(iter, secondList, iter2, secondList.end() );
+    advance(iter2, -3);
+
+    firstList.splice(iter, secondList, iter2, secondList.end());
 }
