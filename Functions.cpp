@@ -54,11 +54,11 @@ void workingWithLists(std::list<int>& firstList, std::list<int>& secondList, int
     advance(iter1, 2);
     reverse(iter1, firstList.end());
     // Part 6
-    auto iter = firstList.begin();
-    advance(iter, 3);
+    auto firstListIter = firstList.begin();
+    advance(firstListIter, 3);
 
-    auto iter2 = secondList.end();
-    advance(iter2, -3);
+    auto secondListIter = secondList.end();
+    advance(secondListIter, -3);
 
-    firstList.splice(iter, secondList, iter2, secondList.end());
+    firstList.splice(firstListIter, secondList, secondListIter, secondList.end());
 }
