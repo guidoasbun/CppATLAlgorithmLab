@@ -26,10 +26,7 @@ void displayScores(vector<int>& scores)
     cout << scores.size();
     // Part 7
     cout << accumulate(scores.begin(), scores.end(), 0);
-    // Last part,
-    // Calculate the average of the scores
-    // Use std::round to round to the decimal part
-    // I do not understand what to do????
+    // Part 8
     int sum{0};
     for_each(scores.begin(), scores.end(), [& sum] (const auto elem) {sum += elem;});
     double size = scores.size();
